@@ -4,23 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/bluebackground"
     android:paddingLeft="15dp"
     android:orientation="vertical"
     tools:context=".InputScreen">
-    <!-- Header -->
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="match_parent"
-        android:layout_height="43dp"
-        android:fontFamily="sans-serif-black"
-        android:layout_marginTop="8dp"
-        android:paddingTop="3dp"
-        android:text="Happy Health"
-        android:textAlignment="textStart"
-        android:textColor="@color/white"
-        android:textSize="26sp"
-        android:textStyle="bold" />
     <!-- Step 1 -->
     <LinearLayout
         android:id="@+id/step1"
@@ -33,55 +20,64 @@
             android:id="@+id/inputName"
             android:layout_width="match_parent"
             android:layout_height="54dp"
-            android:backgroundTint="@color/light_gray"
-            android:ems="10"
+            android:layout_marginTop="50dp"
+            android:background="@null"
+            android:backgroundTint="@color/clear"
+            android:ems="20"
             android:hint="Enter your full name"
             android:inputType="textPersonName"
-            android:layout_marginTop="50dp"
-            android:textColorHint="@color/light_gray"/>
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/dark_gray" />
         <!-- Label -->
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:textColor="@color/white"
+            android:text="Enter your age:"
+            android:textColor="@color/black"
             android:textSize="20sp"
-            android:text="Enter your age:" />
+            android:textStyle="bold" />
         <!-- Age Input -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
             android:gravity="center"
-            android:layout_marginTop="30dp">
+            android:orientation="horizontal">
+
             <Button
+                android:id="@+id/btnMinus"
+                style="?android:attr/borderlessButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/btnMinus"
-                android:backgroundTint="@color/black"
-                android:textSize="40dp"
+                android:backgroundTint="@color/clear"
+                android:gravity="center"
                 android:text="-"
-                android:textColor="@color/white"
-                android:gravity="center" />
+                android:textColor="@color/black"
+                android:textSize="40dp" />
+
             <EditText
                 android:id="@+id/inputAge"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:backgroundTint="@color/light_gray"
-                android:text="0"
-                android:inputType="number"
+                android:backgroundTint="@color/clear"
                 android:gravity="center"
-                android:textColor="@color/white"/>
+                android:hint="0"
+                android:inputType="number"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/dark_gray" />
+
             <Button
+                android:id="@+id/btnAdd"
+                style="?android:attr/borderlessButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/btnAdd"
-                android:backgroundTint="@color/black"
-                android:textSize="40dp"
+                android:backgroundTint="@color/clear"
+                android:gravity="center"
                 android:text="+"
-                android:textColor="@color/white"
-                android:gravity="center" />
+                android:textColor="@color/black"
+                android:textSize="40dp" />
         </LinearLayout>
     </LinearLayout>
     <!-- Step 2 -->
@@ -90,107 +86,132 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:scrollbars="horizontal"
         android:visibility="gone">
         <!-- Height Input -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_marginTop="50dp"
             android:gravity="left"
-            android:layout_marginTop="50dp">
+            android:orientation="horizontal">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:text="Enter your height:" />
+                android:text="Enter your height (cm):"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="20sp" />
+
             <EditText
                 android:id="@+id/inputHeight"
                 android:layout_width="70dp"
                 android:layout_height="50dp"
-                android:backgroundTint="@color/light_gray"
                 android:layout_marginLeft="10dp"
+                android:backgroundTint="@color/dark_gray"
                 android:gravity="center"
                 android:inputType="number"
-                android:text="0"
-                android:textColor="@color/white" />
+                android:hint="0"
+                android:textColorHint="@color/dark_gray"
+                android:textColor="@color/text_color" />
         </LinearLayout>
         <!-- Height Input -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_marginTop="50dp"
             android:gravity="left"
-            android:layout_marginTop="50dp">
+            android:orientation="horizontal">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:text="Enter your weight:" />
+                android:text="Enter your weight:"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="20sp" />
+
             <EditText
                 android:id="@+id/inputWeight"
                 android:layout_width="70dp"
                 android:layout_height="50dp"
-                android:backgroundTint="@color/light_gray"
                 android:layout_marginLeft="10dp"
+                android:backgroundTint="@color/dark_gray"
                 android:gravity="center"
                 android:inputType="number"
-                android:text="0"
-                android:textColor="@color/white" />
+                android:hint="0"
+                android:textColorHint="@color/dark_gray"
+                android:textColor="@color/text_color" />
         </LinearLayout>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
             android:layout_marginTop="50dp"
-            android:textSize="20sp"
-            android:text="Select your gender:" />
+            android:text="Select your gender:"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
         <Spinner
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
             android:id="@+id/spinnerGender"
-            android:spinnerMode="dropdown"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
             android:layout_marginTop="20dp"
-            android:backgroundTint="@color/white"
-            />
+            android:backgroundTint="@color/dark_gray"
+            android:spinnerMode="dropdown" />
+
+    </LinearLayout>
+    <!-- Step 3 -->
+    <LinearLayout
+        android:id="@+id/step3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
             android:layout_marginTop="50dp"
+            android:text="Select your workout intensity:"
+            android:textColor="@color/black"
             android:textSize="20sp"
-            android:text="Select your workout intensity:" />
+            android:textStyle="bold" />
+
         <Spinner
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
             android:id="@+id/spinner"
-            android:spinnerMode="dropdown"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
             android:layout_marginTop="20dp"
-            android:backgroundTint="@color/white"
-            />
+            android:backgroundTint="@color/dark_gray"
+            android:spinnerMode="dropdown" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
             android:layout_marginTop="50dp"
+            android:text="Select your goal:"
+            android:textColor="@color/black"
             android:textSize="20sp"
-            android:text="Select your goal:" />
+            android:textStyle="bold" />
+
         <Spinner
+            android:id="@+id/spinnerGoals"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:id="@+id/spinnerGoals"
-            android:spinnerMode="dropdown"
             android:layout_marginTop="20dp"
-            android:backgroundTint="@color/white"
-            />
+            android:backgroundTint="@color/dark_gray"
+            android:spinnerMode="dropdown" />
 
     </LinearLayout>
     <!-- Back & Next -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:orientation="horizontal"
         android:gravity="center">
         <Button
@@ -200,16 +221,27 @@
             android:backgroundTint="@color/clear"
             android:layout_marginRight="30dp"
             android:text="@string/back"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             style="?android:attr/borderlessButtonStyle"/>
         <Button
             android:id="@+id/next"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/clear"
             android:layout_marginLeft="30dp"
             android:text="@string/next"
-            android:textColor="@color/white"
-            style="?android:attr/borderlessButtonStyle"/>
+            android:textColor="@color/black"
+            android:background="@color/clear"
+            style="?android:attr/borderlessButtonStyle"
+            android:visibility="visible"/>
+        <Button
+            android:id="@+id/finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/clear"
+            android:layout_marginLeft="30dp"
+            android:text="@string/finish"
+            android:textColor="@color/black"
+            style="?android:attr/borderlessButtonStyle"
+            android:visibility="gone"/>
     </LinearLayout>
 </LinearLayout>

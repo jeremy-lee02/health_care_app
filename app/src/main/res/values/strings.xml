@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">Heath Calculator</string>
+    <string name="app_name">Health Calculator</string>
+    <string name="input">Registration</string>
+    <string name="info">User Information</string>
     <string name="next"><u>Next</u></string>
     <string name="back"><u>Back</u></string>
     <string name="finish"><u>Finish</u></string>

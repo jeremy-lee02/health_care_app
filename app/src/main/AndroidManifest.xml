@@ -13,8 +13,17 @@
         android:theme="@style/Theme.Heath_calculator"
         tools:targetApi="31">
         <activity
+            android:name=".UserScreen"
+            android:exported="false"
+            android:label="@string/info">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".InputScreen"
-            android:exported="false">
+            android:exported="false"
+            android:label="@string/input">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
