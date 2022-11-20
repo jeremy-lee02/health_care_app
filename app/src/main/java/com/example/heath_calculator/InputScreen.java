@@ -158,7 +158,7 @@ public class InputScreen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (step1.getVisibility() == View.VISIBLE){
-                    if (inputName.getText().toString().equals("") || Integer.parseInt( inputAge.getText().toString()) < 10){
+                    if (inputName.getText().toString().equals("")|| inputAge.getText().toString().equals("") || Integer.parseInt( inputAge.getText().toString()) < 10 ){
                         step1.setVisibility(View.VISIBLE);
                         step2.setVisibility(View.GONE);
                         step3.setVisibility(View.GONE);
@@ -175,6 +175,7 @@ public class InputScreen extends AppCompatActivity {
                         step3.setVisibility(View.GONE);
                         step2.setVisibility(View.VISIBLE);
                         step1.setVisibility(View.GONE);
+                        Toast.makeText(InputScreen.this,"Your height value must larger than 100cm and weight must larger than 10kg",Toast.LENGTH_LONG).show();
                     }else{
                         step3.setVisibility(View.VISIBLE);
                         step2.setVisibility(View.GONE);
